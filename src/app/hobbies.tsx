@@ -13,7 +13,7 @@ export default function Hobbies({ hobby }: HobbiesType) {
             <ul>
                 {hobby.map((item, i) => (
 
-                    <li>{item}</li>
+                    <li key={item+i}>{item}</li>
                 )
                 )}
             </ul>
