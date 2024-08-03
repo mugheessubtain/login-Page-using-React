@@ -45,12 +45,12 @@ const usersData = [
     post: [
       {
         content:
-          "special Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe velit cum aspernatur numquam asperiores sunt vero eligendi ut ducimus rerum aperiam officiis necessitatibus consequuntur cupiditate, unde voluptates dolore eaque quo!",
-        likes: 100,
+        "Success consists of going from failure to failure without loss of enthusiasm.",
+        likes: 100
       },
       {
         content:
-          "the quick ipsum Lorem  dolor sit amet consectetur adipisicing elit. Saepe velit cum aspernatur numquam asperiores sunt vero eligendi ut ducimus rerum aperiam officiis necessitatibus consequuntur cupiditate, unde voluptates dolore eaque quo!",
+        "When something is important enough, you do it even if the odds are not in your favor.",
         likes: 1500,
       },
     ],
