@@ -4,14 +4,21 @@ type HobbiesType = {
 
 export default function Hobbies({ hobby }: HobbiesType) {
     return (
-        <ul>
+        <>
+        <h2 style={{
+                display:"flex",
+                justifyContent:"center",
+                textDecoration:"underline"
+            }}>Hobbies</h2>
+            <ul>
+                {hobby.map((item, i) => (
 
-            {hobby.map((item, i) => (
-
-                <li>{item}</li>
-            )
-            )}
-        </ul>
+                    <li>{item}</li>
+                )
+                )}
+            </ul>
+            <br /><br /><br />
+        </>
     )
 
 }

@@ -3,6 +3,15 @@ type GreetType = {
 }
 
 export default function Greet({userName}:GreetType){
-    return <h1>Welcome {userName}</h1>
+    return( 
     
+        <div>
+
+    <h1 style={{
+        display:"flex",
+        justifyContent:"center"
+    }}>Welcome {userName}</h1>
+    <br />
+    </div>
+    )
 }

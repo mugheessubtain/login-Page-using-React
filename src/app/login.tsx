@@ -2,22 +2,38 @@
 
 import { useState } from "react"
 import { userType } from "./userType";
+import SignUp from "./signup";
 const usersData = [
   {
     email: "mugheessubtain@gmail.com",
     password: "123456",
     userName: "M.Mughees",
-    hobbies: ["swimming", "gardening"],
+    hobbies: ["swimming", "gardening","Playing cricket","gyming"],
     post: [
       {
         content:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe velit cum aspernatur numquam asperiores sunt vero eligendi ut ducimus rerum aperiam officiis necessitatibus consequuntur cupiditate, unde voluptates dolore eaque quo!",
-        likes: 10,
+          "'When You Feel Like Quitting, Remember Why You Started'",
+        likes: 120,
       },
       {
         content:
-          "ipsum Lorem  dolor sit amet consectetur adipisicing elit. Saepe velit cum aspernatur numquam asperiores sunt vero eligendi ut ducimus rerum aperiam officiis necessitatibus consequuntur cupiditate, unde voluptates dolore eaque quo!",
-        likes: 15,
+          "Don't Wait for Opportunity, Create it.",
+        likes: 105,
+      },
+      {
+        content:
+          "Great Things Never Come From Comfort Zones",
+        likes: 160,
+      },
+      {
+        content:
+          "Action is the Foundational Key to Success",
+        likes: 13,
+      },
+      {
+        content:
+          "Your self-worth is determined by you. ...",
+        likes: 150,
       },
     ],
   },
@@ -45,11 +61,11 @@ type LoginType ={
   setUser: (user: userType)=>void;
 }
 
-export default function Login({ changeAuthStatus, setUser }: LoginType) {
+export default function Login({ changeAuthStatus, setUser }:LoginType) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const loginHandler = () => {
-    let [userFound] = usersData.filter(
+    let [userFound]:any = usersData.filter(
       (user) => user.email === email && user.password === password
     );
     if (userFound) {
@@ -57,6 +73,9 @@ export default function Login({ changeAuthStatus, setUser }: LoginType) {
       setUser(userFound);
     }
   }
+  // const signupHandler=()=>{
+  //   signup(true)
+  // }
 
   return (
     <>
@@ -75,6 +94,10 @@ export default function Login({ changeAuthStatus, setUser }: LoginType) {
 
         }}>
           <div>
+          <h1 style={{
+            display:"flex",
+            justifyContent:"center"
+          }}>Login</h1>
             <label htmlFor="Email"
             >
 
@@ -111,6 +134,7 @@ export default function Login({ changeAuthStatus, setUser }: LoginType) {
                 }}
               />
             </label>
+
             <br /><br />
             <button onClick={loginHandler}
               style={{
@@ -125,6 +149,7 @@ export default function Login({ changeAuthStatus, setUser }: LoginType) {
                 fontStyle: "bold"
               }}
             >Log in</button>
+            {/* <p>Sign up your account <button onClick={signupHandler}>Sign Up</button></p> */}
           </div>
         </div>
       </div >

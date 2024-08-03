@@ -1,9 +1,10 @@
 import Greet from "./greet";
 import Hobbies from "./hobbies";
+import LogOut from "./logout";
 import Posts from "./posts";
 
 
-export default function Timeline({userStatus}){
+export default function Timeline({userStatus,isAuthenticted}){
     return(
         <>
         <Greet
@@ -15,6 +16,8 @@ export default function Timeline({userStatus}){
         <Posts
         posts={userStatus?.post}
         />
+        <LogOut
+        isAuthenticted={isAuthenticted}/>
         </>
     )
 }
