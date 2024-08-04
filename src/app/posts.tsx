@@ -1,9 +1,13 @@
-type Posttype = {
-    posts: string[]
+type Post = {
+   content:string;
+   likes:number
+}
+type PostType={
+    posts:Post[]
 }
 
 
-export default function Posts({ posts }: Posttype) {
+export default function Posts({ posts }: PostType) {
     return (
         <>
             <h2 style={{

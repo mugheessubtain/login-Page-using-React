@@ -8,5 +8,5 @@ export  type userType={
     password:string,
     userName:string,
     hobbies:string[],
-    posts:postType[]
+    post:postType[]
 }

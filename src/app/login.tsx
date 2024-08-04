@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { userType } from "./userType";
-import SignUp from "./signup";
+// import SignUp from "./signup";
 const usersData = [
   {
     email: "mugheessubtain@gmail.com",

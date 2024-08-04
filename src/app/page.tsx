@@ -5,15 +5,13 @@ import Timeline from "./timeline"
 import Login from "./login"
 import { userType } from "./userType"
 import NavBar from "./navbar"
-import SignUp from "./signup"
-import { sign } from "crypto"
-
+// import SignUp from "./signup"
 
 
 export default function Home() {
   const [isAuthenticted, setIsAuthenticted] = useState(false)
   const [user, setUser] = useState<userType | null>(null)
-  const [signup, setSignUp] = useState(false)
+  // const [signup, setSignUp] = useState(false)
   return (
     <>
 
@@ -42,18 +40,18 @@ export default function Home() {
               <Login
                 changeAuthStatus={setIsAuthenticted}
                 setUser={setUser}
-                // signup={setSignUp}
+              // signup={setSignUp}
               />
 
 
             </>
           )
-          
-          // signup?<SignUp/>
+
+        // signup?<SignUp/>
 
 
       }
-      
+
     </>
 
   )

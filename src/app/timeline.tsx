@@ -2,9 +2,13 @@ import Greet from "./greet";
 import Hobbies from "./hobbies";
 import LogOut from "./logout";
 import Posts from "./posts";
+import { userType } from "./userType";
 
-
-export default function Timeline({userStatus,isAuthenticted}){
+type TimelineType={
+    userStatus:userType;
+    isAuthenticted:()=> void
+}
+export default function Timeline({userStatus,isAuthenticted}:TimelineType){
     return(
         <>
         <Greet
